@@ -18,12 +18,12 @@ public class TwoSum {
         int num2;
         for (int i = 0; i < nums.length; i++) {
             num1 = nums[i];
-            for (int j = i+1; j < nums.length - (i + 1); j++) {
+            for (int j = i+1; j < nums.length; j++) {
                 num2 = nums[j];
                 if((num1 + num2) == target){
-                    result[0] = num1;
-                    result[1] = num2;
-                    break;
+                    result[0] = i;
+                    result[1] = j;
+                    return result;
                 }
             }
         }
